@@ -4,21 +4,18 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Responsive Web Design with Sass+Compass</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Responsive Web Design with Sass+Compass">
+		<meta name="author" content="Sam Richard">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
-
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/snugug.css" id="theme">
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
@@ -38,313 +35,672 @@
 			<div class="slides">
 
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
+					<h1>Responsive Web Design with Sass+Compass</h1>
+					<!-- <h4>Come On, Get Sassy</h4> -->
 				</section>
 
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+				<section id="me">
+					<h2>Who Am I?</h2>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
+					<ul class="fragments small">
+						<li class="fragment">Sam Richard</li>
+						<li class="fragment">Sr. Front End Developer, NBCUniversal</li>
+						<li class="fragment">Snugug on <a href="http://twitter.com/snugug"> Twitter</a>, <a href="http://github.com/snugug">GitHub</a>, <a href="http://snugug.com">The Internet</a></li>
+						<li class="fragment">Co-Organizer of <a href="github.com/team-sass">Team Sass</a>, <a href="http://sassconf.com">SassConf</a></li>
+					</ul>
 				</section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+					<section id="assumptions">
+						<h2>I'm Going to Make Some Assumptions…</h2>
 					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
+					<section id="web-standards">
+						<p>You design and build with <a href="http://www.w3.org/standards/about.html">Web Standards</a></p>
 					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
+					<section id="mobile-first">
+						<p>You design and build <a href="http://www.lukew.com/ff/entry.asp?933">Mobile First</a></p>
 					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
+					<section id="content-first">
+						<p>Scratch that, you design and build <a href="http://alistapart.com/article/your-content-now-mobile">Content First</a></p>
+					</section>
+					<section class="quote small" id="mobile-content-first">
+						<blockquote cite="http://www.ripariandata.com/mail-room-blog/blog/an-event-apart-sf-recap-the-message-is-the-medium">
+							<p>It’s not about mobile first (or just small screen first) – it's about content first. But it happens that thinking about what works for mobile does work for other things as well.</p>
+							<b>Jeffery Zeldman</b>
+						</blockquote>
+					</section>
+					<section id="device-agnostic">
+						<p>You designs are <a href="http://alistapart.com/article/responsive-web-design">Device Agnostic</a></p>
+					</section>
+					<section id="future-friendly">
+						<p>You are <a href="http://futurefriend.ly/">Future Friendly</a></p>
 					</section>
 				</section>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+				<section id="unknown-unknowns">
+						<h2>Responsive Web Design isn’t about current devices and known unknowns, it’s about future devices and unknown unknowns.</h2>
+				</section>
+
+				<section data-state="the-web" cite="http://bradfrostweb.com/blog/web/responsive-web-design-missing-the-point/">
+					<section id="past-web">
+						<img src="images/past.png" alt="This is not the web">
+					</section>
+					<section id="present-web">
+						<img src="images/present.png" alt="This is the web">
+					</section>
+					<section id="future-web">
+						<img src="images/future.png" alt="This will be the web">
+					</section>
+
+					<aside class="notes">
+						The point of creating [responsive] sites is to create functional (and hopefully optimal) user experiences for a growing number of web-enabled devices and contexts.
+					</aside>
 				</section>
 
 				<section>
-					<h2>rvl.io</h2>
-					<p>
-						If you don't like writing slides in HTML you can use the online editor <a href="http://www.rvl.io" target="_blank">rvl.io</a>.
-					</p>
+					<section id="you-should">
+						<h2>You Should Also…</h2>
+					</section>
+					<section id="sass-compass">
+						<p>Have a familiarity with <a href="sass-lang.com">Sass</a>+<a href="compass-style.org">Compass</a></p>
+					</section>
+					<section id="modern-css">
+						<p>Have a familiarity with <a href="http://www.w3.org/TR/2001/WD-css3-roadmap-20010523/">Modern CSS</a></p>
+					</section>
+					<section id="pixel-perfect">
+						<p>Have thrown away the phrase "Pixel Perfect"</p>
+					</section>
 				</section>
 
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
+				<section class="quote" id="unstable-medium">
+					<blockquote cite="http://www.ripariandata.com/mail-room-blog/blog/an-event-apart-sf-recap-the-message-is-the-medium">
+						<p>The Web is an Inherently Unstable Medium</p>
+						<b>Ethan Marcotte</b>
+					</blockquote>
+
+					<aside class="notes">
+						Let's Embrace the Entropy
+					</aside>
 				</section>
 
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+				<section id="rwd-needs">
+					<h2>What Do You Need for RWD?</h2>
+
+					<p>As outlined in Ethan Marcotte's <a href="http://www.alistapart.com/articles/responsive-web-design/">Phrase-Coining A List Apart article</a>, Responsive Web Design needs the three following things:</p>
+
+					<ul class="fragments">
+						<li class="fragment">Media Queries</li>
+						<li class="fragment">Fluid Grids</li>
+						<li class="fragment">Flexible Media</li>
 					</ul>
 				</section>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
+				<section id="border-box">
+					<h2>Let's Cheat at CSS</h2>
+
+					<pre><code class="language-scss">// We can import all of Compass safely because it doesn't write any CSS.
+@import 'compass';
+
+// We switch our box model to Border Box.
+// From [Paul Irish](http://paulirish.com/2012/box-sizing-border-box-ftw/)
+* {
+  @include box-sizing('border-box');
+}</code></pre>
 				</section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+				<section id="extension-basics">
+					<h2>Using Compass Extensions</h2>
 
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+					<pre class="fragment"><code class="language-scss">> gem install {extension}</code></pre>
 
-							<section data-markdown>
-							  ## Markdown support
+					<pre class="fragment"><code class="language-scss">require '{extension}'</code></pre>
 
-							  For those of you who like that sort of thing.
-							  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-							</section>
-					</script>
+					<pre class="fragment"><code class="language-scss">@import '{extension}';</code></pre>
 				</section>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
+				<!-- Media Queries -->
+				<section id="media-queries">
+					<h1>Media Queries</h1>
 				</section>
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> -
-						<a href="?#/themes">Default</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<section data-state="alert">
-						<h2>Global State</h2>
-						<p>
-							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-							will be added as a class to the document element when the slide is open. This lets you
-							apply broader style changes, like switching the background.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-state="blackout">
-						<h2>"blackout"</h2>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-state="soothe">
-						<h2>"soothe"</h2>
-						<a href="#" class="image navigate-next">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(-90deg);">
-						</a>
-					</section>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
+				<section class="quote" id="small-screen-first">
+					<blockquote cite="http://bradfrostweb.com/blog/mobile/bdconf-stephen-hay-presents-responsive-design-workflow/">
+						<p>Start with the small screen first, then expand until it looks like shit.</p>
+						<p>TIME FOR A BREAKPOINT!</p>
+						<b>Stephen Hay</b>
 					</blockquote>
 				</section>
 
+				<section id="breakpoint">
+					<h2><a href="https://github.com/team-sass/breakpoint">Breakpoint</a></h2>
+
+					<pre class="fragment"><code class="language-scss">> gem install breakpoint</code></pre>
+
+					<pre class="fragment"><code class="language-scss">require 'breakpoint'</code></pre>
+
+					<pre class="fragment"><code class="language-scss">@import 'breakpoint';</code></pre>
+				</section>
+
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+					<section id="basic-queries-sass">
+						<h2>Basic Media Queries - Sass</h2>
 
-    var nodes = document.querySelectorAll( selector );
+						<pre><code class="language-scss">// Your basic media queries, min-width and min/max width, are super easy!
+$small: 543px;
+$medium: 794px;
+$fence-sm: $small $medium;
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+#foo {
+  content: 'No Media Queries';
 
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
+  @include breakpoint($small) {
+    content: 'Small Media Query';
+  }
+
+  @include breakpoint($fence-sm) {
+    content: 'Fenced Media Query';
+  }
+}</code></pre>
+					</section>
+					<section id="basic-queries-css">
+						<h2>Basic Media Queries - CSS</h2>
+
+						<pre><code class="language-scss"> /* Nested Breakpoint calls become separate media queries */
+#foo {
+  content: 'No Media Queries';
+}
+
+@media (min-width: 543px) {
+	#foo {
+		content: 'Small Media Query';
+	}
+}
+
+@media (min-width: 543px) and (max-width: 794px) {
+	#foo {
+		content: 'Fenced Media Query';
+	}
+}
+</code></pre>
+					</section>
+					<section id="basic-queries-em">
+						<h2>Basic Media Queries - CSS</h2>
+
+						<pre><code class="language-scss"> /* Setting $breakpoint-to-ems: true will write Media Queries in Ems! */
+@media (min-width: 33.9375em) {
+	#foo {
+		content: 'Small Media Query';
+	}
+}
+
+@media (min-width: 33.9375em) and (max-width: 49.625em) {
+	#foo {
+		content: 'Fenced Media Query';
+	}
+}
+</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section id="advanced-queries-sass">
+						<h2>Advanced Media Queries - Sass</h2>
+
+						<pre><code class="language-scss">// Advanced "and" media queries and "or" media queries made simple
+$print-land: print monochrome (orientation landscape);
+
+$fenced-landscape: screen 321px 543px, handheld (orientation portrait);
+
+#foo {
+  @include breakpoint($print-land) {
+    content: 'Monochrome Print in Landscape';
+  }
+
+  @include breakpoint($fence-landscape) {
+    content: 'Screen media type between 300px and 500px or Handheld media type in Portrait';
+  }
+}</code></pre>
+					</section>
+					<section id="advanced-queries-css">
+						<h2>Advanced Media Queries - CSS</h2>
+
+						<pre><code class="language-scss"> /* Advanced "and" media queries and "or" media queries made simple */
+@media print and (monochrome) and (orientation: landscape) {
+	#foo {
+		content: 'Monochrome Print in Landscape';
+	}
+}
+
+@media screen and (min-width: 321px) and (max-width: 543px), handheld and (orientation: portrait) {
+	#foo {
+		content: 'Screen media type between 300px and 500px or Handheld media type in Portrait';
+	}
+}
+</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section id="resolution-queries-sass">
+						<h2>Resolution Media Queries - Sass</h2>
+
+						<pre><code class="language-scss">// Resolution media queries are a pain. Breakpoint makes them easy. We use the standard DPPX units.
+$hidpi: min-resolution 1.5dppx;
+$cross-reso: max-resolution 143dpi;
+
+#foo {
+  @include breakpoint($hidpi) {
+    content: 'Device Pixel Ratio of at least 1.5';
+  }
+
+  @include breakpoint($cross-reso) {
+  	content: 'Cross Browser Resolution Query'
+  }
+}</code></pre>
+					</section>
+					<section id="resolution-queries-css">
+						<h2>Resolution Media Queries - CSS</h2>
+
+						<pre><code class="language-scss"> /* Breakpoint will transform the DPPX unit into cross-browser compatible resolution queries and DPI units into cross-browser DPR queries! */
+@media (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  #foo {
+    content: 'Device Pixel Ratio of at least 1.5';
   }
 }
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<section>
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
+@media (max-resolution: 143dpi), (-webkit-max-device-pixel-ratio: 1.48958), (max--moz-device-pixel-ratio: 1.48958) {
+  #foo {
+    content: "Cross Browser Resolution Query";
+  }
+}
+</code></pre>
 					</section>
 				</section>
 
 				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
+					<section id="no-query-partial-sass">
+						<h2>Media Query Fallbacks - Sass</h2>
+
+						<pre><code class="language-scss">// _mqs.scss
+$touch: pointer coarse, 'no-query' '.touch';
+$no-queries: 678px, 'no-query' '.no-mqs';
+
+#foo {
+  @include breakpoint($touch) {
+    content: 'Touch Device';
+  }
+  @include breakpoint($no-queries) {
+  	content: 'No Media Queries';
+	}
+}</code></pre>
+					</section>
+					<section id="no-query-import-sass">
+						<h2>Media Query Fallbacks - Sass</h2>
+
+						<pre><code class="language-scss">// style.scss
+$breakpoint-no-queries:         false;
+$breakpoint-no-query-wrappers:  false;
+
+@import "mqs";</code></pre>
+
+					<pre><code class="language-scss">// touch.scss
+$breakpoint-no-queries:         true;
+$breakpoint-no-query-wrappers:  '.touch';
+
+@import "mqs";</code></pre>
+					</section>
+					<section id="no-query-css">
+						<h2>Media Query Fallbacks - CSS</h2>
+
+						<pre><code class="language-scss">/* style.css */
+/* Only the Media Query gets printed out here! */
+@media (pointer: coarse) {
+  #foo {
+  	content: 'Touch Device';
+	}
+}</code></pre>
+
+					<pre><code class="language-scss">/* touch.css */
+/* Only the Meida Queries with a .touch no-fallback get printed! */
+.touch #foo {
+	content: 'Touch Device';
+}
+</code></pre>
+					</section>
+				</section>
+
+				<!-- Fluid Grids -->
+				<section id="fluid-grids">
+					<h1>Fluid Grids</h1>
 				</section>
 
 				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
+					<section id="building-with-grids">
+						<h2>Building With Grids</h2>
+						<p>Grids provide order to your design and structure to your information.</p>
+					</section>
+					<section id="street-grids">
+						<img src="images/street_grids.png" alt="Street Grids of NYC, Philly, DC, and Toronto" cite="http://tedpak.com/2013/03/31/what-new-york-does-right">
+					</section>
+					<section id="specific-grids">
+						<p>The best grids are specifc to your content and your design, as they are an extension of both.</p>
+					</section>
 				</section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
+				<section id="singularity">
+					<h2><a href="https://github.com/team-sass/singularity">Singularity</a></h2>
+
+					<pre class="fragment"><code class="language-scss">> gem install singularitygs</code></pre>
+
+					<pre class="fragment"><code class="language-scss">require 'singularitygs'</code></pre>
+
+					<pre class="fragment"><code class="language-scss">@import 'singularitygs';</code></pre>
+				</section>
+			<section>
+				<section id="symmetric-grids-code">
+					<h2>Symmetric Grids</h2>
+
+					<pre><code class="language-scss">// Symmetric grids are expressed as a single number denoting how many equal sized columns you'd like.
+
+$grids: 12;
+$gutters: 1/3;</code></pre>
+				</section>
+				<section id="symmetric-grids-image">
+					<h2>Symmetric Grids</h2>
+
+					<img src="images/symmetric.png" alt="Symmetric Grid">
 				</section>
 
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://hakim.se/projects/reveal-js">Leave feedback on my site</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
+				<section id="asymmetric-grids-code">
+					<h2>Asymmetric Grids</h2>
+
+					<pre><code class="language-scss">// Asymmetric grids are expressed as a list of number denoting the relative sizes of each column to each other.
+
+$grids: 2 8 2;
+$gutters: 1/3;</code></pre>
 				</section>
 
-				<section>
-					<h2>It's free</h2>
-					<p>
-						reveal.js and <a href="http://www.rvl.io">rvl.io</a> are entirely free but if you'd like to support the projects you can donate below.
-						Donations will go towards hosting and domain costs.
-					</p>
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-						<input type="hidden" name="cmd" value="_donations">
-						<input type="hidden" name="business" value="hakim.elhattab@gmail.com">
-						<input type="hidden" name="lc" value="US">
-						<input type="hidden" name="item_name" value="reveal.js / rvl.io">
-						<input type="hidden" name="no_note" value="0">
-						<input type="hidden" name="currency_code" value="USD">
-						<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
-						<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-					</form>
+				<section id="asymmetric-grids-image">
+					<h2>Asymmetric Grids</h2>
+
+					<img src="images/asymmetric.png" alt="Symmetric Grid">
+				</section>
+			</section>
+
+			<section>
+				<section id="semantic-grid">
+					<h2>Semantic Grids</h2>
+					<p>Singularity is what we like to call a semantic grid system, meaning that instead of grid classes being generated that you then apply to your HTML, the grid is stored entirely within your CSS and applied directly to the element you want to use it on.</p>
+				</section>
+				<section id="grid-span-html">
+					<h2>Spanning The Grid - HTML</h2>
+
+					<pre class="language-html"><code class="language-html">&lt;<span class="token keyword">body</span>&gt;
+  &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"main"</span>&gt;Main Section&lt;/<span class="token keyword">div</span>&gt;
+  &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"first"</span>&gt;First Section&lt;/<span class="token keyword">div</span>&gt;
+  &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"second"</span>&gt;Second Section&lt;/<span class="token keyword">div</span>&gt;
+&lt;/<span class="token keyword">body</span>&gt;</code></pre>
+				</section>
+				<section id="grid-span-scss">
+					<h2>Spanning The Grid - Sass</h2>
+
+					<pre><code class="language-scss">// Simply pass the number of columns you'd like to span and what column you'd like to start from.
+
+$grids: 2 8 2;
+$gutters: 1/3;
+
+.first {
+  @include grid-span(1, 1);
+}
+
+.main {
+  @include grid-span(1, 2);
+}
+
+.second {
+  @include grid-span(1, 3);
+}</code></pre>
+				</section>
+				<section id="grid-span-display">
+					<h2>Spanning The Grid - Display</h2>
+					<img src="images/grid-span.png" alt="Grid Span display">
+				</section>
+			</section>
+
+			<section>
+				<section id="responsive-grids">
+					<h2>Responsive Grid Context - Sass</h2>
+
+					<pre><code class="language-scss">// add-grid allows you to automatically change your global Grid Context at various breakpoints
+
+$grids: 12;
+$grids: add-grid(2 8 2 at 700px);
+$gutters: 1/3;
+
+.first {
+  @include grid-span(3, 4);
+
+  @include breakpoint(700px) {
+    @include grid-span(1, 1);
+  }
+}
+
+.main {
+  @include grid-span(6, 7);
+
+  @include breakpoint(700px) {
+    @include grid-span(1, 2);
+  }
+}
+
+.second {
+  @include grid-span(3, 1);
+
+  @include breakpoint(700px) {
+    @include grid-span(1, 3);
+  }
+}</code></pre>
+				</section>
+				<section id="responsive-grids-display">
+					<h2>Responsive Grid Context - Display</h2>
+
+					<video src="videos/rwd-grid-context.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' autoplay loop></video>
+				</section>
+			</section>
+			<section>
+				<section id="nested-grid-html">
+					<h2>Nested Grids - HTML</h2>
+
+					<pre class="language-html"><code class="language-html">&lt;<span class="token keyword">body</span>&gt;
+  &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"main"</span>&gt;
+    &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"one"</span>&gt;One&lt;/<span class="token keyword">div</span>&gt;
+    &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"two"</span>&gt;Two&lt;/<span class="token keyword">div</span>&gt;
+    &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"three"</span>&gt;
+      &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"a"</span>&gt;Three A&lt;/<span class="token keyword">div</span>&gt;
+      &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"b"</span>&gt;Three B&lt;/<span class="token keyword">div</span>&gt;
+      &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"c"</span>&gt;Three C&lt;/<span class="token keyword">div</span>&gt;
+    &lt;/<span class="token keyword">div</span>&gt;
+    &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"four"</span>&gt;Four&lt;/<span class="token keyword">div</span>&gt;
+  &lt;/<span class="token keyword">div</span>&gt;
+  &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"first"</span>&gt;First Section&lt;/<span class="token keyword">div</span>&gt;
+  &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"second"</span>&gt;Second Section&lt;/<span class="token keyword">div</span>&gt;
+&lt;/<span class="token keyword">body</span>&gt;</code></pre>
+				</section>
+				<section id="nested-grid-outer-scss">
+					<h2>Nested Grids (Outer Grid) - Sass</h2>
+
+					<pre><code class="language-scss">$grids: 2 8 2;
+$gutters: 1/3;
+
+.first {
+  @include grid-span(1, 1);
+}
+
+.main {
+  @include grid-span(1, 2);
+}
+
+.second {
+  @include grid-span(1, 3);
+}
+</code></pre>
+				</section>
+				<section id="nested-grid-outer-display">
+					<h2>Nested Grid (Outer Grid) - Display</h2>
+					<img src="images/nest-outer.png" alt="Nested Grids, Outer Grid">
+				</section>
+				<section id="nested-grid-inner-1-scss">
+					<h2>Nested Grids (First Nesting) - Sass</h2>
+
+					<pre><code class="language-scss">@include layout(8) {
+	.one {
+	  @include grid-span(1, 1);
+	}
+
+	.two {
+	  @include grid-span(1, 8);
+	}
+
+	.three {
+	  @include grid-span(6, 2);
+	}
+
+	.four {
+	  @include grid-span(2, 4);
+	  clear: both;
+	 }
+}</code></pre>
+				</section>
+				<section id="nested-grid-inner-1-display">
+					<h2>Nested Grid (First Nesting) - Display</h2>
+					<img src="images/nest-inner-1.png" alt="Nested Grids, First Nesting">
+				</section>
+				<section id="nested-grid-inner-2-scss">
+					<h2>Nested Grids (Second Nesting) - Sass</h2>
+
+					<pre><code class="language-scss">@include layout(6) {
+	.a {
+	  @include grid-span(2, 3);
+	}
+
+	.b {
+	  @include grid-span(2, 5);
+	}
+
+	.c {
+	  @include grid-span(2, 1);
+	}
+}</code></pre>
+				</section>
+				<section id="nested-grid-inner-2-display">
+					<h2>Nested Grid (Second Nesting) - Display</h2>
+					<img src="images/nest-inner-2.png" alt="Nested Grids, Second Nesting">
+				</section>
+			</section>
+
+			<!-- Fluid Media -->
+			<section id="fluid-media">
+				<h1>Fluid Media</h1>
+			</section>
+
+			<section id="toolkit">
+				<h2><a href="https://github.com/team-sass/toolkit">Toolkit</a></h2>
+
+				<pre class="fragment"><code class="language-scss">> gem install toolkit</code></pre>
+
+				<pre class="fragment"><code class="language-scss">require 'toolkit'</code></pre>
+
+				<pre class="fragment"><code class="language-scss">@import 'toolkit';</code></pre>
+			</section>
+
+			<section>
+				<section id="fluid-media-basic">
+					<h2>Basic Fluid Media</h2>
+
+					<pre><code class="language-scss">// Making images and HTML5 video fluid is pretty easy.
+
+img, video {
+	max-width: 100%;
+	height: auto;
+}</code></pre>
 				</section>
 
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
+				<section id="intrinsic-ratios-sass">
+					<h2>Intrinsic Ratios - Sass</h2>
+
+					<pre><code class="language-scss">// Using [Intrinisc Ratios](http://alistapart.com/article/creating-intrinsic-ratios-for-video), you can even make embedded videos fluid!
+
+.fluid-16-9 {
+  @include intrinsic-ratio;
+}
+.fluid-4-3 {
+	@include intrinsic-ratio(4/3);
+}
+</code></pre>
+<pre class="language-html"><code class="language-html">&lt;<span class="token keyword">body</span>&gt;
+  &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"fluid-16-9"</span>&gt;
+  	&lt;<span class="token keyword">iframe</span> <span class="token selector">width</span>=<span class="token string">"560"</span> <span class="token selector">height</span>=<span class="token string">"315"</span> <span class="token selector">src</span>=<span class="token string">"http://www.youtube.com/embed/hHloF85dQZg?rel=0"</span> <span class="token selector">frameborder</span>=<span class="token string">"0"</span> <span class="token selector">allowfullscreen</span>&gt;&lt;/<span class="token keyword">iframe</span>&gt;
+  &lt;/<span class="token keyword">div</span>&gt;
+&lt;/<span class="token keyword">body</span>&gt;</code></pre>
 				</section>
+
+				<section id="intrinsic-ratios-css">
+					<h2>Intrinsic Ratios - CSS</h2>
+
+					<pre><code class="language-scss">/* Intrinsic Ratio code is built for a small code footprint, so shared code is extended. */
+.fluid-16-9, .fluid-4-3 {
+  position: relative;
+  height: 0;
+}
+
+.fluid-16-9 > *, .fluid-4-3 > * {
+  display: block;
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.fluid-16-9 {
+  padding-top: 56.25%;
+  width: 100%;
+}
+
+.fluid-4-3 {
+  padding-top: 75%;
+  width: 100%;
+}</code></pre>
+				</section>
+				<section id="intrinsic-ratios-display">
+					<h2>Intrinsic Ratios - Display</h2>
+
+					<video src="videos/irs.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' controls></video>
+				</section>
+			</section>
+
+			<section id="did-i-mention">
+				<h2>Did I Mention?</h2>
+				<p>Everything you just saw? Yah, it's backend independent. You can use it anywhere, with anything, for any project. Sass Rocks</p>
+			</section>
+
+			<section id="thank-you">
+				<h1>Thank You</h1>
+			</section>
+
 
 			</div>
+
+			<div id="pagecounter"></div>
 
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
+		<script src="plugin/prism.js"></script>
+		<script src="js/pages.js"></script>
 
 		<script>
 
@@ -364,7 +720,6 @@ function linkify( selector ) {
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
