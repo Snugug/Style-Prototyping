@@ -1,0 +1,109 @@
+// @import "reveal";
+@import 'style-guide';
+
+body {
+  font-family: "P22Underground-Thin";
+  font-size: 1.5em;
+}
+
+.the-web .state-background {
+  background: #f3f1da;
+}
+
+strong,
+h1, h2, h3, h4, h5, h6 {
+  font-family: "P22Underground-Light";
+}
+
+blockquote {
+  font-family: "P22Underground-Light";
+  color: nth($tertiary, 5);
+
+  font-size: 2em;
+
+  .small & {
+    font-size: 1.45em;
+  }
+
+  // width: 90%;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  text-align: right;
+  // margin: 0 auto;
+
+
+
+  border-right: 5px solid nth($secondary, 3);
+
+  .quote & b {
+    color: nth($black, 6);
+    font-size: 1em / golden-ratio();
+    font-family: "P22Underground-Thin";
+    font-weight: normal;
+  }
+}
+
+ul.fragments,
+ol.fragments {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-top: golden-ratio() * .5em;
+  font-size: 1.25em;
+
+  &.small {
+    font-size: 1em;
+  }
+
+  li {
+    margin-bottom: golden-ratio() * .25em;
+  }
+}
+
+.the-web .reveal .controls div.navigate-left {
+  border-right-color: nth($black, 1);
+}
+
+.the-web .reveal .controls div.navigate-right {
+  border-left-color: nth($black, 1);
+}
+
+.the-web .reveal .controls div.navigate-up {
+  border-bottom-color: nth($black, 1);
+}
+
+.the-web .reveal .controls div.navigate-down {
+  border-top-color: nth($black, 1);
+}
+
+
+#responsive-grids,
+#intrinsic-ratios-css {
+  pre {
+    font-size: .75em;
+    line-height: 1em;
+  }
+}
+
+
+#pagecounter {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+
+  z-index: 100;
+
+  font-size: .75em;
+
+  .the-web & {
+    color: nth($black, 1);
+  }
+}
+
+// RWD Summit
+// pre .token {
+//   font-weight: bold !important;
+// }
