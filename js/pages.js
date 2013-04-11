@@ -10,5 +10,22 @@ Reveal.addEventListener( 'slidechanged', function( e ) {
     if (e.indexv !== 0) {
       page += '-' + e.indexv;
     }
-    counter.innerHTML = page;
+
+    var cite = e.currentSlide.dataset.cite;
+    var source = e.currentSlide.dataset.source;
+
+    var citation = '';
+
+    if (source !== undefined) {
+      citation = ' <a href="' + source + '">';
+      if (cite !== undefined) {
+         citation += cite;
+      }
+      else {
+        citaiton += source;
+      }
+      citation += '</a>';
+    }
+
+    counter.innerHTML = page + citation;
 } );
