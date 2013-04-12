@@ -136,19 +136,6 @@
 					</ul>
 				</section>
 
-				<section id="border-box">
-					<h2>Let's Cheat at CSS</h2>
-
-					<pre><code class="language-scss">// We can import all of Compass safely because it doesn't write any CSS.
-@import 'compass';
-
-// We switch our box model to Border Box.
-// From [Paul Irish](http://paulirish.com/2012/box-sizing-border-box-ftw/)
-* {
-  @include box-sizing('border-box');
-}</code></pre>
-				</section>
-
 				<section id="extension-basics">
 					<h2>Using Compass Extensions</h2>
 
@@ -387,6 +374,18 @@ $breakpoint-no-query-wrappers:  '.touch';
 						<p>The best grids are specifc to your content and your design, as they are an extension of both.</p>
 					</section>
 				</section>
+
+				<section id="border-box">
+					<h2>Let's Cheat at CSS</h2>
+
+					<pre><code class="language-scss">// We can import all of Compass safely because it doesn't write any CSS.
+@import 'compass';
+
+// We switch our box model to Border Box.
+// From [Paul Irish](http://paulirish.com/2012/box-sizing-border-box-ftw/)
+* {
+  @include box-sizing('border-box');
+}</code></pre>
 
 				<section id="singularity">
 					<h2><a href="https://github.com/team-sass/singularity">Singularity</a></h2>
