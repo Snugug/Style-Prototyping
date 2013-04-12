@@ -436,11 +436,11 @@ $gutters: 1/3;</code></pre>
 				<section id="grid-span-html">
 					<h2>Spanning The Grid - HTML</h2>
 
-					<pre class="language-html"><code class="language-html">&lt;<span class="token keyword">body</span>&gt;
-  &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"main"</span>&gt;Main Section&lt;/<span class="token keyword">div</span>&gt;
-  &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"first"</span>&gt;First Section&lt;/<span class="token keyword">div</span>&gt;
-  &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"second"</span>&gt;Second Section&lt;/<span class="token keyword">div</span>&gt;
-&lt;/<span class="token keyword">body</span>&gt;</code></pre>
+					<pre><code class="language-markup">&lt;body&gt;
+  &lt;div class="main"&gt;Main Section&lt;/div&gt;
+  &lt;div class="first"&gt;First Section&lt;/div&gt;
+  &lt;div class="second"&gt;Second Section&lt;/div&gt;
+&lt;/body&gt;</code></pre>
 				</section>
 				<section id="grid-span-scss">
 					<h2>Spanning The Grid - Sass</h2>
@@ -512,20 +512,20 @@ $gutters: 1/3;
 				<section id="nested-grid-html">
 					<h2>Nested Grids - HTML</h2>
 
-					<pre class="language-html"><code class="language-html">&lt;<span class="token keyword">body</span>&gt;
-  &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"main"</span>&gt;
-    &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"one"</span>&gt;One&lt;/<span class="token keyword">div</span>&gt;
-    &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"two"</span>&gt;Two&lt;/<span class="token keyword">div</span>&gt;
-    &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"three"</span>&gt;
-      &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"a"</span>&gt;Three A&lt;/<span class="token keyword">div</span>&gt;
-      &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"b"</span>&gt;Three B&lt;/<span class="token keyword">div</span>&gt;
-      &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"c"</span>&gt;Three C&lt;/<span class="token keyword">div</span>&gt;
-    &lt;/<span class="token keyword">div</span>&gt;
-    &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"four"</span>&gt;Four&lt;/<span class="token keyword">div</span>&gt;
-  &lt;/<span class="token keyword">div</span>&gt;
-  &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"first"</span>&gt;First Section&lt;/<span class="token keyword">div</span>&gt;
-  &lt;<span class="token keyword">div</span> <span class="token selector">class</span>=<span class="token string">"second"</span>&gt;Second Section&lt;/<span class="token keyword">div</span>&gt;
-&lt;/<span class="token keyword">body</span>&gt;</code></pre>
+					<pre><code class="language-markup">&lt;body&gt;
+  &lt;div class="main"&gt;
+    &lt;div class="one"&gt;One&lt;/div&gt;
+    &lt;div class="two"&gt;Two&lt;/div&gt;
+    &lt;div class="three"&gt;
+      &lt;div class="a"&gt;Three A&lt;/div&gt;
+      &lt;div class="b"&gt;Three B&lt;/div&gt;
+      &lt;div class="c"&gt;Three C&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="four"&gt;Four&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="first"&gt;First Section&lt;/div&gt;
+  &lt;div class="second"&gt;Second Section&lt;/div&gt;
+&lt;/body&gt;</code></pre>
 				</section>
 				<section id="nested-grid-outer-scss">
 					<h2>Nested Grids (Outer Grid) - Sass</h2>
