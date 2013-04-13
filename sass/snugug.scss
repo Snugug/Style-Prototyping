@@ -2,7 +2,10 @@
 @import 'style-guide';
 
 body {
-  font-family: "P22Underground-Thin";
+  .wf-inactive & {
+    font-family: "P22Underground-Thin";
+  }
+  font-weight: 100;
   font-size: 1.5em;
 }
 
@@ -12,11 +15,17 @@ body {
 
 strong,
 h1, h2, h3, h4, h5, h6 {
-  font-family: "P22Underground-Light";
+  .wf-inactive & {
+    font-family: "P22Underground-Light";
+  }
+  font-weight: 300;
 }
 
 blockquote {
-  font-family: "P22Underground-Light";
+  .wf-inactive & {
+    font-family: "P22Underground-Light";
+  }
+  font-weight: 300;
   color: nth($tertiary, 5);
 
   font-size: 2em;
@@ -40,8 +49,10 @@ blockquote {
   .quote & b {
     color: nth($black, 6);
     font-size: 1em / golden-ratio();
-    font-family: "P22Underground-Thin";
-    font-weight: normal;
+    .wf-inactive & {
+      font-family: "P22Underground-Thin";
+    }
+    font-weight: 100;
   }
 }
 
