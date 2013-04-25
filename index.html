@@ -336,13 +336,13 @@ $no-queries: 678px, 'no-query' '.no-mqs';
 
 						<pre><code class="language-scss">// style.scss
 $breakpoint-no-queries:         false;
-$breakpoint-no-query-wrappers:  false;
+$breakpoint-no-query-fallbacks: false;
 
 @import "mqs";</code></pre>
 
 					<pre><code class="language-scss">// touch.scss
 $breakpoint-no-queries:         true;
-$breakpoint-no-query-wrappers:  '.touch';
+$breakpoint-no-query-fallbacks: '.touch';
 
 @import "mqs";</code></pre>
 					</section>
