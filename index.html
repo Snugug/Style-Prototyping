@@ -59,36 +59,46 @@
 					</ul>
 				</section>
 
-				<!-- Example of nested vertical slides -->
 				<section>
-					<section id="assumptions">
-						<h2>I'm Going to Make Some Assumptions…</h2>
+					<section id="experiment">
+						<h1>First, an experiment</h1>
 					</section>
-					<section id="web-standards">
-						<p>You design and build with <a href="http://www.w3.org/standards/about.html">Web Standards</a></p>
+					<section id="experiment-setup">
+						<p>Hold up your hand if you own a smartphone</p>
 					</section>
-					<section id="mobile-first">
-						<p>You design and build <a href="http://www.lukew.com/ff/entry.asp?933">Mobile First</a></p>
+					<section id="experiment-commence">
+						<p>Lower it if you have the exact same phone (make, model, carrier, and OS version) as your neighbors</p>
+					</section>
+					<section id="experiment-finale" data-state="experiment">
+						<a href="http://knowyourmeme.com/memes/thats-racist"><img src="images/thats-racist.gif" alt="That's Devicest"/></a>
+					</section>
+					<section id="unknown-unknowns">
+						<h2>Responsive Web Design isn’t about current devices and known unknowns, it’s about future devices and unknown unknowns.</h2>
+					</section>
+				</section>
+
+				<section>
+					<section id="the-right-way">
+						<h1>What's a Dev to do?</h1>
 					</section>
 					<section id="content-first">
-						<p>Scratch that, you design and build <a href="http://alistapart.com/article/your-content-now-mobile">Content First</a></p>
+						<p>We start with <a href="http://alistapart.com/article/your-content-now-mobile">content first</a></p>
 					</section>
-					<section class="quote small" id="mobile-content-first">
-						<blockquote cite="http://www.ripariandata.com/mail-room-blog/blog/an-event-apart-sf-recap-the-message-is-the-medium">
+					<section class="quote" id="zeldman-content">
+						<blockquote cite="http://www.ripariandata.com/mail-room-blog/blog/an-event-apart-sf-recap-the-message-is-the-medium" class="zeldman">
 							<p>It’s not about mobile first (or just small screen first) – it's about content first. But it happens that thinking about what works for mobile does work for other things as well.</p>
 							<b>Jeffery Zeldman</b>
 						</blockquote>
 					</section>
-					<section id="device-agnostic">
-						<p>Your designs are <a href="http://alistapart.com/article/responsive-web-design">Device Agnostic</a></p>
+					<section id="mobile-first">
+						<p>Then we design for <a href="http://www.lukew.com/ff/entry.asp?933">mobile</a> and work our way up</p>
 					</section>
-					<section id="future-friendly">
-						<p>You are <a href="http://futurefriend.ly/">Future Friendly</a></p>
+					<section id="standards">
+						<p>Using <a href="http://www.w3.org/standards/about.html">web standards</a> and <a href="https://github.com/Snugug/training-glossary/wiki">best practices</a></p>
 					</section>
-				</section>
-
-				<section id="unknown-unknowns">
-						<h2>Responsive Web Design isn’t about current devices and known unknowns, it’s about future devices and unknown unknowns.</h2>
+					<section id="agnostic-friendly">
+						<p>While staying <a href="http://alistapart.com/article/responsive-web-design">device agnostic</a> and <a href="http://futurefriend.ly/">future friendly</a>.</p>
+					</section>
 				</section>
 
 				<section data-state="the-web">
@@ -108,18 +118,16 @@
 				</section>
 
 				<section>
-					<section id="you-should">
-						<h2>You Should Also…</h2>
-					</section>
-					<section id="sass-compass">
-						<p>Have a familiarity with <a href="sass-lang.com">Sass</a>+<a href="compass-style.org">Compass</a></p>
-					</section>
-					<section id="modern-css">
-						<p>Have a familiarity with <a href="http://www.w3.org/TR/2001/WD-css3-roadmap-20010523/">Modern CSS</a></p>
-					</section>
 					<section id="pixel-perfect">
-						<p>Have thrown away the phrase "Pixel Perfect"</p>
+						<p>Oh, and throw away “Pixel Perfect”</p>
 					</section>
+				</section>
+
+				<section class="quote" id="rwd-is-hard">
+					<blockquote>
+						<p>Of Course Responsive Web Design is Hard.</p> <p>It's Design.</p>
+						<b>Mason Wendell</b>
+					</blockquote>
 				</section>
 
 				<section class="quote" id="unstable-medium">
@@ -319,12 +327,12 @@ $cross-reso: max-resolution 143dpi;
 						<h2>Media Query Fallbacks - Sass</h2>
 
 						<pre><code class="language-scss">// _mqs.scss
-$touch: pointer coarse, 'no-query' '.touch';
+$touch: pointer fine, 'no-query' '.no-touch';
 $no-queries: 678px, 'no-query' '.no-mqs';
 
 #foo {
   @include breakpoint($touch) {
-    content: 'Touch Device';
+    content: 'Fine Pointer';
   }
   @include breakpoint($no-queries) {
   	content: 'No Media Queries';
@@ -342,7 +350,7 @@ $breakpoint-no-query-fallbacks: false;
 
 					<pre><code class="language-scss">// touch.scss
 $breakpoint-no-queries:         true;
-$breakpoint-no-query-fallbacks: '.touch';
+$breakpoint-no-query-fallbacks: '.no-touch';
 
 @import "mqs";</code></pre>
 					</section>
@@ -351,18 +359,32 @@ $breakpoint-no-query-fallbacks: '.touch';
 
 						<pre><code class="language-scss">/* style.css */
 /* Only the Media Query gets printed out here! */
-@media (pointer: coarse) {
+@media (pointer: fine) {
   #foo {
-  	content: 'Touch Device';
+  	content: 'Fine Pointer';
 	}
 }</code></pre>
+				</section>
+				<section id="no-touching" data-state="experiment">
+					<img src="images/no-touching.gif" alt="No Touching!"></span>
+				</section>
+				<section id="no-query-css-2">
+					<h2>Media Query Fallbacks - CSS</h2>
 
+						<pre><code class="language-scss">/* style.css */
+/* Only the Media Query gets printed out here! */
+@media (pointer: fine) {
+  #foo {
+  	content: 'Fine Pointer';
+	}
+}</code></pre>
 					<pre><code class="language-scss">/* touch.css */
 /* Only the Meida Queries with a .touch no-fallback get printed! */
-.touch #foo {
-	content: 'Touch Device';
+.no-touch #foo {
+	content: 'Fine Pointer';
 }
 </code></pre>
+
 					</section>
 				</section>
 
@@ -375,13 +397,12 @@ $breakpoint-no-query-fallbacks: '.touch';
 					<section id="building-with-grids">
 						<h2>Building With Grids</h2>
 						<p>Grids provide order to your design and structure to your information.</p>
+						<p>The best grids are specific to your content and your design, as they are an extension of both.</p>
 					</section>
-					<section id="street-grids" data-source="http://tedpak.com/2013/03/31/what-new-york-does-right" data-cite="Ted Pak">
-						<img src="images/street_grids.png" alt="Street Grids of NYC, Philly, DC, and Toronto">
-					</section>
-					<section id="specific-grids">
-						<p>The best grids are specifc to your content and your design, as they are an extension of both.</p>
-					</section>
+				</section>
+
+				<section id="box-model" data-state="experiment">
+					<img src="images/boxmodel.png" alt="Box Model">
 				</section>
 
 				<section id="border-box">
