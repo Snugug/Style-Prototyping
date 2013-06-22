@@ -13,6 +13,19 @@ body {
   background: #f3f1da;
 }
 
+.experiment {
+  $bkg: nth($primary, 3);
+  .state-background {
+    background: $bkg;
+  }
+  img {
+    border: .5em solid complement($bkg);
+  }
+  #box-model img {
+    border: none;
+  }
+}
+
 strong,
 h1, h2, h3, h4, h5, h6 {
   .wf-inactive & {
@@ -118,3 +131,17 @@ ol.fragments {
 // pre .token {
 //   font-weight: bold !important;
 // }
+
+.zeldman {
+  b:after {
+    position: absolute;
+    content: '';
+    width: image-width('bbd.png') / 8;
+    height: image-height('bbd.png') / 8;
+    background-image: image-url('bbd.png');
+    background-size: 100%;
+    bottom: 1.4em;
+    right: 7em;
+    @include rotate(20deg);
+  }
+}
