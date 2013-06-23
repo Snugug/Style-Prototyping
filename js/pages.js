@@ -29,3 +29,18 @@ Reveal.addEventListener( 'slidechanged', function( e ) {
 
     counter.innerHTML = page + citation;
 } );
+
+
+//////////////////////////////
+// Play Audio
+//////////////////////////////
+Reveal.addEventListener( 'slidechanged', function(e) {
+  var belong = document.getElementById('belong-song');
+  if (e.indexh === 2 && e.indexv === 0) {
+    belong.play();
+  }
+
+  if (e.indexh !== 2 && e.indexv !== 0) {
+    belong.pause();
+  }
+});
