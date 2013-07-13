@@ -228,3 +228,20 @@ ol.fragments {
 
   // }
 }
+
+strong.lowercase {
+  text-transform: none;
+  font-size: 1.25em;
+}
+
+@import 'singularitygs';
+@import 'singularity-extras';
+
+#html-style-tile-responsive {
+  $style-grid: ratio(golden(), 4);
+  @for $i from 1 through 4 {
+    img:nth-of-type(#{$i}) {
+      @include grid-span(1, $i, $style-grid, 1/3);
+    }
+  }
+}
