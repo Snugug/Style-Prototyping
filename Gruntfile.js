@@ -1,104 +1,69 @@
-/* global module:false */
-module.exports = function(grunt) {
+(function () {
+  'use strict';
+  var deepmerge = require('deepmerge');
+  var matchdep = require('matchdep');
 
-	// Project configuration
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
-		meta: {
-			banner:
-				'/*!\n' +
-				' * reveal.js <%= pkg.version %> (<%= grunt.template.today("yyyy-mm-dd, HH:MM") %>)\n' +
-				' * http://lab.hakim.se/reveal-js\n' +
-				' * MIT licensed\n' +
-				' *\n' +
-				' * Copyright (C) 2013 Hakim El Hattab, http://hakim.se\n' +
-				' */'
-		},
+  module.exports = function (grunt) {
 
-		// Tests will be added soon
-		qunit: {
-			files: [ 'test/**/*.html' ]
-		},
+    grunt.initConfig({
+      // Development Server
+      connect: {
+        server: {
+          options: {
+            port: 8808,
+            base: '.'
+          }
+        }
+      },
 
-		uglify: {
-			options: {
-				banner: '<%= meta.banner %>\n'
-			},
-			build: {
-				src: 'js/reveal.js',
-				dest: 'js/reveal.min.js'
-			}
-		},
+      // Watch Task
+      watch: {
+        options: {
+          livereload: 8088
+        },
+        html: {
+          files: '**/*.html'
+        },
+        // sass: {
+        //   files: 'sass/**/*.scss',
+        //   tasks: ['compass:dev'],
+        //   options: {
+        //     livereload: false
+        //   }
+        // },
+        css: {
+          files: 'css/**/*.css'
+        },
+        js: {
+          files: 'js/**/*.js'
+        },
+        files: {
+          files: [
+            'images/**/*',
+            'videos/**/*'
+          ]
+        }
+      },
 
-		cssmin: {
-			compress: {
-				files: {
-					'css/reveal.min.css': [ 'css/reveal.css' ]
-				}
-			}
-		},
+      // Compass
+      // compass: {
+      //   options: {
+      //     sassDir: 'sass',
 
-		sass: {
-			main: {
-				files: {
-					'css/theme/default.css': 'css/theme/source/default.scss',
-					'css/theme/beige.css': 'css/theme/source/beige.scss',
-					'css/theme/night.css': 'css/theme/source/night.scss',
-					'css/theme/serif.css': 'css/theme/source/serif.scss',
-					'css/theme/simple.css': 'css/theme/source/simple.scss',
-					'css/theme/sky.css': 'css/theme/source/sky.scss',
-					'css/theme/moon.css': 'css/theme/source/moon.scss',
-					'css/theme/solarized.css': 'css/theme/source/solarized.scss'
-				}
-			}
-		},
+      //   }
+      // }
+    });
 
-		jshint: {
-			options: {
-				curly: false,
-				eqeqeq: true,
-				immed: true,
-				latedef: true,
-				newcap: true,
-				noarg: true,
-				sub: true,
-				undef: true,
-				eqnull: true,
-				browser: true,
-				expr: true,
-				globals: {
-					head: false,
-					module: false,
-					console: false
-				}
-			},
-			files: [ 'Gruntfile.js', 'js/reveal.js' ]
-		},
+    //////////////////////////////
+    // Grunt Task Loads
+    //////////////////////////////
+    matchdep.filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-		watch: {
-			main: {
-				files: [ 'Gruntfile.js', 'js/reveal.js', 'css/reveal.css' ],
-				tasks: 'default'
-			},
-			theme: {
-				files: [ 'css/theme/source/*.scss', 'css/theme/template/*.scss' ],
-				tasks: 'themes'
-			}
-		}
-
-	});
-
-	// Dependencies
-	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
-	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
-	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-contrib-sass' );
-
-	// Default task
-	grunt.registerTask( 'default', [ 'jshint', 'cssmin', 'uglify' ] );
-
-	// Theme task
-	grunt.registerTask( 'themes', [ 'sass' ] );
-
-};
+    //////////////////////////////
+    // Server Task
+    //////////////////////////////
+    grunt.registerTask('server', 'Runs a server to dev from', function() {
+      grunt.task.run(['connect', 'watch']);
+    });
+  }
+})();
