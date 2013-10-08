@@ -24,7 +24,7 @@
 		<script type="text/javascript">
 		  (function() {
 		    var config = {
-		      kitId: 'hsu4wwn',
+		      kitId: 'baj1tih',
 		      scriptTimeout: 3000
 		    };
 		    var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
@@ -59,9 +59,13 @@
 					</ul>
 				</section>
 
+				<!-- Quiz -->
 				<section>
+					<section id="quiz">
+						<h1>First, A Quiz</h1>
+					</section>
 					<section id="not-like-the-other">
-						<audio id="belong-song" src="videos/belong.mp3" preload="auto">
+						<audio data-autoplay id="belong-song" src="videos/belong.mp3" preload="auto">
 							<h2>One of These Things Is Not Like The Other</h2>
 						</audio>
 						<div class="not-container">
@@ -72,16 +76,10 @@
 						</div>
 					</section>
 					<section id="chrome">
-						<h2 class="fragment">The Answer Is…</h2>
+						<h2>The Answer Is…</h2>
 						<img class="fragment" src="images/chrome.png" alt="Google Chrome">
 						<h2 class="fragment">The Only Web Design Tool</h2>
 					</section>
-				</section>
-				<section class="quote" id="laser-printer">
-					<blockquote cite="http://karenmcgrane.com/2013/05/23/drupalcon-keynote-video-and-talk-notes/">
-						<p>Guess what. The web’s not a laser printer.</p>
-						<b>Karen McGrane</b>
-					</blockquote>
 				</section>
 				<section>
 					<section id="print-tools">
@@ -95,19 +93,185 @@
 						<h2>This is a Farming Tool</h2>
 						<img src="images/tractor.png" alt="Tractor">
 					</section>
-
-				</section>
-					<section id="wrong-tools">
-						<h2>While you may be able to hammer in a screw, it's the wrong tool for the job</h2>
-					</section>
-					<section id="right-tools">
-						<h2>Pick the right tool for the job.</h2>
-					</section>
-					<section id="hammer">
-						<h2>Don't be the farmer with a hammer and a box of screws</h2>
+					<section id="right-tool">
+						<h2>The Web and Print are different mediums</h2>
+						<h2 class="fragment">We need to treat them differently</h2>
 					</section>
 				</section>
 
+				<!-- Dao -->
+				<section>
+					<section id="dao">
+						<h1><a href="http://alistapart.com/article/dao">The Dao of Web Design</a></h1>
+						<p class="small">John Allsopp, April 07, 2000</p>
+					</section>
+				</section>
+
+				<!-- Ritual -->
+				<section>
+					<section id="ritual">
+						<h1>Ritual</h1>
+					</section>
+					<section class="quote small" id="tao-ritual">
+						<blockquote cite="http://alistapart.com/article/dao">
+							<p>Well established hierarchies are not easily uprooted;<br>
+								Closely held beliefs are not easily released;<br>
+								So ritual enthralls generation after generation.</p>
+							<b>Tao Te Ching; 38 Ritual</b>
+						</blockquote>
+					</section>
+					<section id="before-time">
+						<p>Before the web, there was print. Hundreds of years of print.</p>
+						<p class="fragment">Before there was print, there was writing. Thousands of years of writing</p>
+						<p class="fragment">It was only natural than that the web borrowed heavily from print</p>
+					</section>
+					<section id="borrowing" class="quote small">
+						<blockquote cite="http://alistapart.com/article/dao">
+							<p>When a new medium borrows from an existing one, some of what it borrows makes sense, but much of the borrowing is thoughtless, "ritual", and often constrains the new medium. Over time, the new medium develops its own conventions, throwing off existing conventions that don't make sense.</p>
+						</blockquote>
+					</section>
+					<section id="early-tv">
+						<p>This happened with the transition from radio to television</p>
+						<p class="fragment">Often referred to as "radio with pictures", early television followed the format of popular radio, even at times narrating scenes that the audience could see as if they could not</p>
+					</section>
+					<section id="howdy-doody" data-source="http://archive.org/details/HowdyDoodyForPresident" data-cite="Howdy Doody for President - Archive.org">
+						<video data-autoplay class="stretch" src="videos/howdy-doody.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video>
+						<!-- <iframe src="http://archive.org/embed/HowdyDoodyForPresident" width="960" height="720" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe> -->
+						<aside class="notes">
+							<p>Notice how they say "The Voice of Mr X" even though there is a box that very clearly says "The Voice of Mr X"</p>
+							<p>Notice how they vamp in-between Mr X's pauses to ensure no "dead air"</p>
+							<p>Notice how they hold up a sign and describe every single line even though we can read it? Notice how it was introduced to us even though we can see it's on screen?</p>
+						</aside>
+					</section>
+					<section id="mtv">
+						<p>It happened with the introduction of music videos as well</p>
+						<p class="fragment">Early music videos were mostly the band miming themselves playing a song</p>
+					</section>
+					<section id="video-killed-the-radio-star" data-source="https://www.youtube.com/watch?v=Iwuy4hHO3YQ" data-cite="Video Killed The Radio Star - Buggles, YouTube">
+						<video data-autoplay src="videos/video-killed-the-radio-star.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' class="stretch"></video>
+						<!-- <iframe width="960" height="720" src="//www.youtube.com/embed/Iwuy4hHO3YQ?rel=0" frameborder="0" allowfullscreen></iframe> -->
+						<aside class="notes">
+							<p>The two artists, a sound board, and the two women providing backup vocals</p>
+							<p>They don't even move!</p>
+						</aside>
+					</section>
+					<section id="cast-off-old">
+						<p>In both cases, the thoughtless rituals of their parent mediums were cast off while the ones that made sense to new medium's conventions flourished.</p>
+					</section>
+					<section id="tv-evolved">
+						<p>Television evolved genres and formats suited for visual story telling</p>
+					</section>
+					<section id="community" data-source="http://www.hulu.com/watch/96407" data-cite="Community - Pilot, Hulu">
+						<video data-autoplay class="stretch" src="videos/community.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' ></video>
+						<!-- <iframe width="960" height="540" src="http://www.hulu.com/embed.html?eid=mlty2wqd7vnlkc44bg2epg" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe> -->
+						<aside class="notes">
+							<p>Able to use the visual medium to set up punchlines and introduce characters</p>
+							<p>Plays off of interplay of audio/visual and expected visualization from given audio</p>
+						</aside>
+					</section>
+					<section id="mtv-evolved">
+						<p>Artists found that they could visually express themselves and their music in ways other than a mimed concert</p>
+					</section>
+					<section id="sabotage" data-source="https://www.youtube.com/watch?v=z5rRZdiu1UE" data-cite="Sabotage - Beastie Boys, YouTube">
+						<video data-autoplay class="stretch" src="videos/sabotage.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' ></video>
+						<!-- <iframe width="960" height="720" src="//www.youtube.com/embed/z5rRZdiu1UE?rel=0" frameborder="0" allowfullscreen></iframe> -->
+						<aside class="notes">
+							<p>No singing, pure Beastie Boys</p>
+						</aside>
+					</section>
+					<section id="web-evolved">
+						<p>Although the web medium sprang from print, print's conventions have for too long overshadowed the realities of the web</p>
+						<p class="fragment">The web has been treated as if it were made of paper</p>
+						<p class="fragment">It is time for the web, like other new mediums before it, to cast off the constraining rituals of the medium from which it emerged</p>
+					</section>
+				</section>
+
+				<!-- Control -->
+				<section>
+					<section id="control">
+						<h1>Control</h1>
+					</section>
+					<section class="quote small" id="tao-control">
+						<blockquote cite="http://alistapart.com/article/dao">
+							<p>The sage… accepts the ebb and flow of things,<br>
+								Nurtures them, but does not own them…</p>
+							<b>Tao Te Ching; 2 Abstraction</b>
+						</blockquote>
+					</section>
+					<section id="print-is-totally-fixed">
+						<p>One of the core understandings of print is that<br><strong>What You See Is What You Get</strong></p>
+						<p class="fragment">The designer has absolute pixel-perfect control over the design</p>
+						<p class="fragment">There is a fixed content size, fixed display size, fixed viewing mode</p>
+					</section>
+					<section id="laser-printer" class="quote">
+						<blockquote cite="http://karenmcgrane.com/2013/05/23/drupalcon-keynote-video-and-talk-notes/">
+							<p>Guess what. The web’s not a laser printer.</p>
+							<b>Karen McGrane</b>
+						</blockquote>
+					</section>
+					<section id="print-limitations" class="quote">
+						<p>What if print's control is really a limitation?</p>
+						<blockquote class="fragment">
+							<p>You can think - we can fix the size of the text - or you can think - the size of the text is unalterable</p>
+						</blockquote>
+						<blockquote class="fragment">
+							<p>You can think - the dimensions of a page can be controlled - or - the dimensions of a page can't be altered</p>
+						</blockquote>
+					</section>
+					<section id="web-strength">
+						<h2>In Print's Limitation We Find The Web's Strength:</h2>
+						<h1 class="fragment">Flexibility</h1>
+					</section>
+				</section>
+
+				<!-- The Way -->
+				<section>
+					<section id="the-way">
+						<h1>The Way</h1>
+					</section>
+					<section id="tao-shapes" class="quote">
+						<blockquote>
+							<p>The Way is shaped by use,<br>
+								But then the shape is lost.<br>
+								Do not hold fast to shapes<br>
+								But let sensation flow into the world<br>
+								As a river courses down to the sea.</p>
+							<b>Tao Te Ching; 32 Shapes</b>
+						</blockquote>
+					</section>
+					<section>
+						<p>Form should follow function</p>
+						<p class="fragment">Start with what your pages do, not what they looks like</p>
+						<p class="fragment">Regardless of how they got there, users are there for your function, not your form</p>
+					</section>
+					<section id="maslow-needs" data-source="http://creativecommons.org/licenses/by-sa/3.0" data-cite="Factoryjoe, via Wikimedia Commons">
+						<img src="images/Mazlow's_Hierarchy_of_Needs.svg" alt="">
+					</section>
+					<section id="website-needs" data-source="http://kristoferlayon.files.wordpress.com/2012/03/klayonsxsw2012.pdf" data-cite="Inspired by Kristofer Layon">
+						<img src="images/Website_Hierarchy.svg" alt="">
+					</section>
+					<section id="needs-redux">
+						<p>Users come to your site for the content, so you should design content first.</p>
+						<p class="fragment">Your content and your site needs to be predictable in order to be useful.</p>
+						<p class="fragment">Your site needs to be fast and reliable in order to be usable.</p>
+						<p class="fragment">You need a style that will reflect your brand and can be carried from your content up</p>
+					</section>
+					<section id="flair">
+						<h2>Only after all other needs have been met should you focus on visual flair</h2>
+					</section>
+					<section id="nega-flair">
+						<h2>Visual flair should not negatively affect any of the other needs</h2>
+					</section>
+
+					<section id="design-flow">
+						<h2>Let your design flow from your content</h2>
+						<h2 class="fragment">Let your user flow around your site</h2>
+						<h2 class="fragment">Tend to any rocks in your stream</h2>
+						<h2 class="fragment">Be fluid as water</h2>
+					</section>
+				</section>
+
+				<!-- Page Metaphor -->
 				<section>
 					<section id="page-metaphore" data-state="experiment">
 						<h1>The Page Metaphor Is Killing The Web</h1>
@@ -123,163 +287,81 @@
 					</section>
 				</section>
 
-				<section id="html5" data-source="http://www.w3.org/html/logo/" data-cite="W3C">
+				<!-- Right Tools -->
+				<section id="html5" data-source="http://www.w3.org/html/logo/" data-cite="W3C" data-state="html5">
 					<img src="images/HTML5_Logo.svg" alt="HTML5">
 					<div><img src="images/html5-logo/html5_3d_effects.svg" alt="3D Effects">
 					<img src="images/html5-logo/html5_connectivity.svg" alt="Connectivity">
 					<img src="images/html5-logo/html5_css3_styling.svg" alt="CSS3 Styling">
 					<img src="images/html5-logo/html5_device_access.svg" alt="Device Access">
 					<img src="images/html5-logo/html5_multimedia.svg" alt="Multimedia">
-					<img src="images/html5-logo/html5_offline_storage.svg" alt="3D Offline Storage">
+					<img src="images/html5-logo/html5_offline_storage.svg" alt="Offline Storage">
 					<img src="images/html5-logo/html5_perfintegration.svg" alt="Performance and Integration">
 					<img src="images/html5-logo/html5_semantics.svg" alt="Semantics"></div>
+					<aside class="notes">
+						<ul>
+							<li>3D Effects</li>
+							<li>Connectivity</li>
+							<li>CSS3</li>
+							<li>Device Access</li>
+							<li>Multimedia</li>
+							<li>Offline Storage</li>
+							<li>Performance and Integration</li>
+							<li>Semantics</li>
+						</ul>
+					</aside>
 				</section>
 
+					<!-- Tools -->
 				<section>
-					<section id="design-focus">
-						<h1>Design Focus</h1>
+					<section id="tools">
+						<h2>Let's employ modern development tools to help</h2>
 					</section>
-					<section id="maslow-needs" data-source="http://creativecommons.org/licenses/by-sa/3.0" data-cite="Factoryjoe, via Wikimedia Commons">
-						<img src="images/Mazlow's_Hierarchy_of_Needs.svg" alt="">
-					</section>
-					<section id="website-needs" data-source="http://kristoferlayon.files.wordpress.com/2012/03/klayonsxsw2012.pdf" data-cite="Inspired by Kristofer Layon">
-						<img src="images/Website_Hierarchy.svg" alt="">
-					</section>
-					<section id="needs-redux">
-						<p>Users come to your site for the content, so you should design content first.</p><br>
-						<p class="fragment">Your content and your site needs to be predictable in order to be useful.</p><br>
-						<p class="fragment">Your site needs to be fast and reliable in order to be usable.</p><br>
-						<p class="fragment">You need a style that will reflect your brand and can be carried from your content up</p>
-					</section>
-					<section id="flair">
-						<h2>Only after all other needs have been met should you focus on visual flair</h2>
-					</section>
-					<section id="nega-flair">
-						<h2>Visual flair should not negatively effect any of the other needs</h2>
-					</section>
-				</section>
-
-				<section>
-					<section id="designing-content">
-						<h1>Designing Content</h1>
-					</section>
-					<section id="style-tiles">
-						<h2>Style Tiles</h2>
-						<p><a href="http://styletil.es/">Style Tiles</a> provide a way for you to suss out branding in a content-driven way</p><br>
-					</section>
-					<section id="tile-patterns">
-						<h2>Style Tiles are driven by text, colors, patterns, and adjectives</h2>
-					</section>
-					<section id="in-browser-tile">
-						<h2>This is trivial to do in browser</h2>
-					</section>
-					<section id="html-style-tile-large">
-						<img src="images/style-tile-04.png" alt="Extra Large Style Tile">
-					</section>
-					<section id="responsive-tile">
-						<h2>Plus, you can do responsively!</h2>
-					</section>
-					<section id="html-style-tile-responsive">
-						<img src="images/style-tile-01.png" alt="Small Style Tile">
-						<img src="images/style-tile-02.png" alt="Medium Style Tile">
-						<img src="images/style-tile-03.png" alt="Large Style Tile">
-						<img src="images/style-tile-04.png" alt="Extra Large Style Tile">
-					</section>
-					<section id="webfonts">
-						<p>By designing our content in-browser, we're able to use real web fonts with real web rendering and kerning across multiple platforms</p><br>
-						<p class="fragment">We are also able to see immediately how our typography decision affect performance</p>
-					</section>
-					<section id="typography">
-						<img src="images/typography.png" alt="Typography">
+					<section id="of-the-trade">
+						<img src="images/yeoman.png" alt="Yeoman" class="fragment">
+						<img src="images/grunt.png" alt="Grunt" class="fragment">
+						<img src="images/bower.png" alt="Bower" class="fragment">
+						<br>
+						<img src="images/sass.png" alt="Sass" class="fragment">
+						<img src="images/handlebars.png" alt="Handlebars" class="fragment">
 					</section>
 				</section>
 
+				<!-- Style Prototypes -->
 				<section>
-					<section id="designing-baselines">
-						<h1>Designing Baselines</h1>
-					</section>
-					<section id="style-guides">
-						<h2>Style Guides</h2>
-						<p>By designing a <a href="http://bradfrostweb.com/blog/post/atomic-web-design/#atoms">style guide</a>, we are able to create a site-specific <a href="http://meyerweb.com/eric/tools/css/reset/">CSS Reset</a></p><br>
-						<p class="fragment">Makes sure that all native elements have baseline styles.</p><br>
-						<p class="fragment">All larger components are pieces of smaller native elements</p>
-					</section>
-					<section id="style-guide">
-						<img src="images/style-guide.png" alt="Style Guide">
-					</section>
-				</section>
-
-				<section>
-					<section id="designing-systems">
-						<h1>Designing Systems</h1>
-					</section>
-					<section id="component-guide">
-						<h2>Component Guides</h2>
-						<p><a href="http://cognition.happycog.com/article/sweet-systems">Component Guides</a> are a must for being able to provide consistency for your users</p>
-						<p class="fragment">Similar pattern with different flair reduce cognitive load, making your site easier to use</p>
-					</section>
-					<section id="carousel">
-						<img src="images/carousel.jpeg" alt="Carousel">
-					</section>
-					<section id="carsouels">
-						<img src="images/carousel-more.jpeg" alt="Carousels">
-					</section>
-					<section id="components">
-						<p>We can create a generalized set of markup, apply CSS and JavaScript, and have a reusable component for our site</p>
-					</section>
-					<section id="component">
-						<img src="images/carousel-component-01.png" alt="Carousel Component">
-					</section>
-					<section id="component-variant">
-						<img src="images/carousel-component-02.png" alt="Carousel Compnent Variant">
-					</section>
-					<section id="component-use">
-						<h2>By finding patterns in our content, we are able to build reusable components</h2><br>
-						<h2 class="fragment">Components reduce our maintenance cost and make using our sites easier</h2>
-					</section>
-				</section>
-
-				<section>
-					<section id="color-guides">
-						<h1>Color Guides</h1>
-						<p>Oh, and we can make color guides so we don't need to grasp for colors anymore</p>
-					</section>
-					<section id="color-guide">
-						<img src="images/color-guide.png" alt="Color Guide">
-					</section>
-				</section>
-
-				<section>
-					<section id="designing-prototypes">
-						<h1>Style Prototypes</h1>
+					<section id="sp-logo">
+						<img src="images/sp.png" alt="Style Prototype Logo">
 					</section>
 					<section id="style-prototypes">
-						<h2><a href="https://github.com/Team-Sass/generator-style-prototype">Style Prototypes</a></h2>
-						<p>A <a href="http://yeoman.io/">Yeoman</a> <a href="http://yeoman.io/community-generators.html">Generator</a> designed for building in-browser Style Tiles, Style Guides, Component Guides, and Color Guides</p>
-					</section>
-					<section id="install-prototypes">
-						<pre><code class="language-javascript">npm install -g generator-style-prototype</code></pre>
+						<h2>Style Prototypes are a tool for Designing Style Systems In Browser from the Content Out</h2>
 					</section>
 					<section id="yo-prototype">
 						<pre><code class="language-javascript">yo style-prototype</code></pre><br>
-						<img src="images/yo-prototype.png" alt="Yo Prototype">
+						<img src="images/sp-intro.png" alt="Style Prototype Intro">
 					</section>
-					<section id="prototype-overview">
-						<p>Style Prototypes use <a href="http://gruntjs.com/">Grunt</a> for task running, <a href="http://sass-lang.com/">Sass</a>+<a href="http://compass-style.org/">Compass</a> for CSS, <a href="http://handlebarsjs.com/">Handlebars</a> for HTML, and <a href="http://bower.io/">Bower</a> for package management</p><br>
-						<p class="fragment">When you're finished, you can easily deploy your finished prototype to GitHub Pages or your own server</p><br>
-						<p class="fragment">You can also build a Compass Extension to provide a way to drop the finished styling directly into any project</p>
+					<section id="prototype-setup">
+						<img src="images/sp-questions.png" alt="Style Prototype Setup">
 					</section>
-					<section id="agile-prototypes">
-						<p>Designers and developer working together</p><br>
-						<p class="fragment">On one codebase</p>
-						<p class="fragment">Speaking the same language</p>
-						<p class="fragment">A fully integrated agile cycle</p>
+					<section id="grunt-server">
+						<pre><code class="language-javascript">grunt server</code></pre>
 					</section>
-					<section id="finally">
-						<h2>Finally</h2>
+					<section id="grunt-magic">
+						<img src="images/magic.gif" alt="Magic" class="stretch ">
 					</section>
 				</section>
 
+				<!-- Connecting -->
+				<section id="connected-up">
+					<h2>Go to the following:</h2>
+					<h1 contenteditable>http://192.168.1.0:8000</h1>
+				</section>
+
+				<!-- Design in Your Browser -->
+				<section data-state="boom" id="design-in-your-browser">
+					<h1>Design In Your Browser</h1>
+
+					<audio data-autoplay src="videos/kapow.mp3" preload="auto">
+				</section>
 
 
 				<section id="thank-you">
@@ -316,17 +398,20 @@
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } }
+					, { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } }
+					, { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } }
+					, { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+					, { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// , { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 
 		</script>
+
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':8088/livereload.js?snipver=1"></' + 'script>')
+    </script>
 
 		<!-- Google Analytics -->
 		<script>
