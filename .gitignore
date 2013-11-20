@@ -6,4 +6,5 @@ node_modules/
 .sass-cache
 *.screenflow
 videos/raw
+videos/walkthrough.mp4
 bower_components/
