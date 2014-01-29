@@ -335,6 +335,11 @@
 					<section id="style-prototypes">
 						<h2>Style Prototypes are a tool for Designing Style Systems In Browser from the Content Out</h2>
 					</section>
+					<section id="install-style-prototypes">
+						<h3>Make sure Ruby, Node.js, and Git are installed and available on the command line</h3>
+						<pre class="fragment"><code class="language-javascript">npm install -g yo grunt-cli bower generator-style-prototype</code></pre>
+						<pre class="fragment"><code class="language-javascript">gem install bundler</code></pre>
+					</section>
 					<section id="yo-prototype">
 						<pre><code class="language-javascript">yo style-prototype</code></pre><br>
 						<img src="images/sp-intro.png" alt="Style Prototype Intro">
@@ -377,6 +382,104 @@
 					</section>
 				</section>
 
+				<section>
+					<section id="design-workflow">
+						<h1>Design Workflow</h1>
+					</section>
+					<section id="design-players">
+						<p>There are a variety of roles that play a role in the design and development of a site:</p>
+						<ul class="fragment roll-in">
+							<li><strong>Visual Design</strong> - Designer(s) responsible for look and feel</li>
+							<li class="fragment roll-in"><strong>Production Design</strong> - Designer(s) responsible for in-browser design decisions. Ideally, visual design and production design is the same</li>
+							<li class="fragment roll-in"><strong>Front End Development</strong> - HTML/CSS/JS development expert(s)</li>
+							<li class="fragment roll-in"><strong>Back End Development</strong> - Server side development expert(s)</li>
+						</ul>
+					</section>
+					<section id="design-dev-cycle">
+						<img src="images/Design-Dev-Cycle.svg" alt="Steps of Design/Development Cycle. Project Planning: Product Owner, Project Manager, Visual Design, Production Design, Front End Development, Back End Development, and Quality Assurance agree upon the scope of a story. In-Browser Design: Visual Design, Production Design, Front and Back End Development agree upon the component's HTML in the Style Prototype. In the implementation, the Front and Back End Developers create develop the implementation output while the visual and produciton designers create the design. Feature QA happens in the implementation, while cross-browser QA happens in the style prototype. Once finished, the designers and developers integrate the style prototype into the integration, where regression QA happens.">
+					</section>
+				</section>
+
+				<!-- Elements -->
+				<section>
+					<section id="elements">
+						<h1>Elements</h1>
+					</section>
+					<section id="building-blocks">
+						<p>Elements are the building blocks of any site; each core tag, styled</p>
+						<p class="fragment">Following the <a href="https://github.com/snugug/north">North</a> standards, we don't want to have our core styling bleed out from the tags, so we can constrain it.</p>
+						<p class="fragment">We are then able to call upon the base styling via the extendable class</p>
+					</section>
+				</section>
+
+				<!-- Components -->
+				<section>
+					<section id="components">
+						<h1>Components</h1>
+					</section>
+					<section id="what-are-components">
+						<p>Components are the building blocks of a site.</p>
+						<p class="fragment">Often called block or modules as well, a component is a single, reusable set of HTML that forms a coherent piece of a site</p>
+						<p class="fragment">A single component may have stying or experience variations, but what defines a component is the shared underlying HTML</p>
+					</section>
+					<section id="components-with-eqjs">
+						<p>Components need to be able to respond to whatever container they're placed in</p>
+						<p class="fragment">We can accomplish this with a tiny, self contained JavaScript library called <a href="http://github.com/snugug/eq.js">eq.js</a></p>
+					</section>
+					<section id="eqjs">
+						<p>eq.js allows for limited pseudo-element-query usage by restricting "element queries" to <code>min-width</code> only, only checking for changes on <code>DOMContentLoaded</code> and <code>resize</code>, and requiring the query information be stored in HTML</p>
+						<p class="fragment">By constraining what can be queried (and how it can be defined), it becomes possible to use "element queries" fast and efficiently in any project and in under 3kb</p>
+					</section>
+					<section id="eqjs-example-html">
+						<pre><code class="language-markup">&lt;div class="component" data-eq-pts="small: 400, medium: 600, large: 900"&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+					</section>
+					<section id="eqjs-example-sass">
+						<pre><code class="language-scss">.container {
+    border: 2px solid red;
+    background-color: rgba(red, .25);
+
+    &[data-eq-state="small"] {
+      border-color: green;
+      background-color: rgba(green .25);
+    }
+
+    &[data-eq-state="medium"] {
+      border-color: orange;
+      background-color: rgba(orange, .25);
+    }
+
+    &[data-eq-state="large"] {
+      border-color: blue;
+      background-color: rgba(blue, .25);
+    }
+}</code></pre>
+					</section>
+				</section>
+
+				<!-- Layouts -->
+				<section>
+					<section id="layouts">
+						<h1>Layouts</h1>
+					</section>
+					<section id="layout-basics">
+						<p>Layouts in Style Prototypes are very similar to grey box UX wireframes</p>
+						<p class="fragment">Each layout is simply a set of regions that can be visualized using the <code>.prototype--layout-block</code> class</p>
+						<p class="fragment">To make a responsive layout, simply add media queries!</p>
+					</section>
+				</section>
+
+				<!-- Prototypes -->
+				<section>
+					<section id="prototypes">
+						<h1>Prototypes</h1>
+					</section>
+					<section id="creating-prototype-pages">
+						<p>Often, a client will ant to see what components will look like when placed into layouts</p>
+						<p class="fragment">Style Prototypes can be expanded to include prototype sections to show components and layouts working together!</p>
+					</section>
+				</section>
 
 
 				<section id="thank-you">
